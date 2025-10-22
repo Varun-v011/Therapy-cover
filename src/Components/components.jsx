@@ -1,13 +1,37 @@
 import React from "react";
-import './styles.css'
+import './styles.css';
 
-function Box(){
+export function BoxButton({ icon, title, description, onClick, colorClass }) {
     return (
-        <div className="box-container" style={{ border: "1px solid #eee", padding: "20px", borderRadius: "8px", width: "250px", textAlign: "center" }}>
-          <div className="icon" style={{ fontSize: "24px", marginBottom: "10px" }}>{icon}</div>
-          <h3>{title}</h3>
-          <p>{description}</p>
+      <button className={`dashboard-box ${colorClass}`} onClick={onClick}>
+        <div className="dashboard-box-icon">{icon}</div>
+        <div>
+          <div className="dashboard-box-title">{title}</div>
+          <div className="dashboard-box-description">{description}</div>
         </div>
-      );
-    }
-export default Box
+      </button>
+    );
+  }
+
+  
+export function InfoBox({ title, children }) {
+    return (
+      <div className="dashboard-infobox">
+        <div className="dashboard-infobox-title">{title}</div>
+        <div>{children}</div>
+      </div>
+    );
+  }
+  export function ProfileBox({ title, icon, children }) {
+    return (
+      <section className="profile-box">
+        <div className="profile-box-title">
+          {icon && <span className="profile-box-icon">{icon}</span>} {title}
+        </div>
+        <div className="profile-box-content">{children}</div>
+      </section>
+    );
+  }
+
+
+
