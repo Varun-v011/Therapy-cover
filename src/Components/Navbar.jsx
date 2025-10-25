@@ -30,7 +30,7 @@ function Navbar() {
             </li>
             <li className="navbar-list-item">
               <FaRegCalendarCheck className="navbar-list-icon" />
-              <Link to="/plan-leave" className="nav-links">Plan my leave</Link>
+              <Link to="/Coverage" className="nav-links">Plan my leave</Link>
             </li>
             <li className="navbar-list-item">
               <FaRegCalendarMinus className="navbar-list-icon" />

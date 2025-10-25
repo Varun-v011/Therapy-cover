@@ -1,12 +1,15 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./App.css";
 import Navbar from "./Components/Navbar";
 import Dashboard from "./Dashboard";
 import Profile from "./Profile";
-import "./App.css";
+import Availability from "./Components/availability";
+import Coverage from "./Components/coveragePg";
+
 
 function App() {
-  const dummyProfile = null; // You can later replace this with API data
+  const dummyProfile = null;  //profile api
 
   return (
     <BrowserRouter>
@@ -16,6 +19,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/profile" element={<Profile profile={dummyProfile} />} />
+            <Route path="/availability" element={<Availability />} />
+            <Route path="/Coverage" element={<Coverage />} />
           </Routes>
         </div>
       </div>

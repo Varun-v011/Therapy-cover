@@ -3,9 +3,10 @@ import "./App.css"
 import { BoxButton } from "./Components/components";
 import { InfoBox } from "./Components/components";
 import { FaRegCalendarCheck, FaUserCircle, FaHeart, FaChartLine } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 function Dashboard(){
-
+  const navigate = useNavigate();
     return(
         <div className="dashboard-main">
       <div className="dashboard-row dashboard-row-top">
@@ -14,14 +15,14 @@ function Dashboard(){
           title="I'm Available to Cover"
           description="Set dates when you're available to provide coverage for other therapists"
           colorClass="blue"
-          onClick={() => alert("Available to cover clicked")}
+          onClick={() => navigate("/availability")}
         />
         <BoxButton
           icon={<FaUserCircle />}
           title="I Need Coverage"
           description="Request coverage for dates when you'll be away from your practice"
           colorClass="green"
-          onClick={() => alert("Need coverage clicked")}
+          onClick={() => navigate("/Coverage")}
         />
         <BoxButton
           icon={<FaHeart />}
